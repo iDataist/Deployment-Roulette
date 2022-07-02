@@ -79,8 +79,10 @@ The AWS environment will be built in the `us-east-2` region of AWS
         ![](apps/bloatware/bloatware-fix-2-2.png)
         ![](apps/bloatware/bloatware-fix-2-3.png)
         ![](apps/bloatware/bloatware-fix-2-result-1.png)
+        ![](apps/bloatware/bloatware-fix-2-result-2.png)
+        ![](apps/bloatware/bloatware-fix-2-result-3.png)
     3. The output of `kubectl get pods --all-namespaces` to show deployed services
-    ![](apps/bloatware/bloatware-fix-2-result-2.png)
+    ![](apps/bloatware/bloatware-fix-2-result-4.png)
 
 5. Observability with metrics
     1. Installed a metrics server on the kubernetes cluster and identify the service using up the most memory
