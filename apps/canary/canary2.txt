@@ -1,0 +1,16 @@
+os ~/Downloads/Deployment Roulette/apps/canary $ kubectl get pods --all-namespaces
+NAMESPACE     NAME                           READY   STATUS    RESTARTS   AGE
+kube-system   aws-node-h6xnc                 1/1     Running   0          86m
+kube-system   aws-node-q8d52                 1/1     Running   0          86m
+kube-system   coredns-f47955f89-5spjp        1/1     Running   0          91m
+kube-system   coredns-f47955f89-x9wq8        1/1     Running   0          91m
+kube-system   kube-proxy-nk99r               1/1     Running   0          86m
+kube-system   kube-proxy-s5r5g               1/1     Running   0          86m
+udacity       blue-8475cbdf46-fztx7          1/1     Running   0          56m
+udacity       blue-8475cbdf46-t2ptj          1/1     Running   0          56m
+udacity       blue-8475cbdf46-v4tjs          1/1     Running   0          56m
+udacity       canary-v1-64598c676f-j97lc     1/1     Running   0          79m
+udacity       canary-v1-64598c676f-mnzls     1/1     Running   0          79m
+udacity       canary-v2-5dc9c56687-6pcxf     1/1     Running   0          2m41s
+udacity       canary-v2-5dc9c56687-lnb2m     1/1     Running   0          3m35s
+udacity       hello-world-76d74574bb-g5z6l   1/1     Running   0          40m

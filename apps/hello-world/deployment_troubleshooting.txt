@@ -1,0 +1,42 @@
+os ~/Downloads/Deployment Roulette $ kubectl get pods -n udacity
+NAME                          READY   STATUS    RESTARTS   AGE
+blue-8475cbdf46-fmtj7         1/1     Running   0          2m11s
+blue-8475cbdf46-snv29         1/1     Running   0          2m11s
+blue-8475cbdf46-zrr4c         1/1     Running   0          2m10s
+canary-v1-64598c676f-j97lc    1/1     Running   0          2m32s
+canary-v1-64598c676f-mnzls    1/1     Running   0          2m32s
+canary-v1-64598c676f-nr6hf    1/1     Running   0          2m32s
+hello-world-d696c5567-hdddr   1/1     Running   4          3m25s
+
+os ~/Downloads/Deployment Roulette $ kubectl -n udacity logs -f deployment/hello-world
+Ready to receive requests on 9000
+ * Serving Flask app 'main' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://10.100.1.224:9000/ (Press CTRL+C to quit)
+Failed health check you want to ping /healthz
+10.100.1.244 - - [30/Jun/2022 18:10:15] "GET /nginx_status HTTP/1.1" 500 -
+Failed health check you want to ping /healthz
+10.100.1.244 - - [30/Jun/2022 18:10:17] "GET /nginx_status HTTP/1.1" 500 -
+Failed health check you want to ping /healthz
+10.100.1.244 - - [30/Jun/2022 18:10:19] "GET /nginx_status HTTP/1.1" 500 -
+
+os ~/Downloads/Deployment Roulette $ kubectl apply -f apps/hello-world
+deployment.apps/hello-world configured
+service/hello-world unchanged
+deployment.apps/blue unchanged
+
+os ~/Downloads/Deployment Roulette $ kubectl -n udacity logs -f deployment/hello-world
+Ready to receive requests on 9000
+ * Serving Flask app 'main' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://10.100.1.75:9000/ (Press CTRL+C to quit)

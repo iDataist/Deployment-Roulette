@@ -1,0 +1,108 @@
+os ~/Downloads/Deployment Roulette/apps/bloatware $ kubectl apply -f bloatware.yml
+deployment.apps/bloaty-mcbloatface created
+os ~/Downloads/Deployment Roulette/apps/bloatware $ kubectl get pods
+NAME                                  READY   STATUS    RESTARTS   AGE
+bloaty-mcbloatface-58c98b98d8-2lcbx   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-6f9nj   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-6wz72   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-76zts   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-7rnmz   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-8hmqq   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-9z7c9   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-bqnjf   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-cv2qm   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-jk87w   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-kcxw6   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-ljdrl   1/1     Running   0          11s
+bloaty-mcbloatface-58c98b98d8-p4nzw   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-qrhfd   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-tkbx5   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-tkcwt   0/1     Pending   0          11s
+bloaty-mcbloatface-58c98b98d8-w4s8w   0/1     Pending   0          11s
+blue-8475cbdf46-nvtht                 1/1     Running   0          28m
+blue-8475cbdf46-pqsk6                 1/1     Running   0          28m
+blue-8475cbdf46-rsjvv                 1/1     Running   0          28m
+canary-v1-64598c676f-7kjmb            1/1     Running   0          28m
+canary-v1-64598c676f-hvfvn            1/1     Running   0          28m
+canary-v2-5dc9c56687-knspj            1/1     Running   0          28m
+canary-v2-5dc9c56687-z6hzc            1/1     Running   0          28m
+green-5cdd96c9b4-9vj9l                1/1     Running   0          28m
+green-5cdd96c9b4-dx4jr                1/1     Running   0          28m
+green-5cdd96c9b4-jhjsp                1/1     Running   0          28m
+hello-world-76d74574bb-lg48j          1/1     Running   0          28m
+os ~/Downloads/Deployment Roulette/apps/bloatware $ kubectl get pods --all-namespaces
+NAMESPACE     NAME                                  READY   STATUS    RESTARTS   AGE
+kube-system   aws-node-nq5kh                        1/1     Running   0          33m
+kube-system   cluster-autoscaler-d8cc67649-9mbdf    1/1     Running   0          6m35s
+kube-system   coredns-f47955f89-8wstd               1/1     Running   0          29m
+kube-system   coredns-f47955f89-ql2cs               1/1     Running   0          29m
+kube-system   kube-proxy-rm5zv                      1/1     Running   0          33m
+udacity       bloaty-mcbloatface-58c98b98d8-2lcbx   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-6f9nj   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-6wz72   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-76zts   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-7rnmz   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-8hmqq   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-9z7c9   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-bqnjf   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-cv2qm   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-jk87w   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-kcxw6   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-ljdrl   1/1     Running   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-p4nzw   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-qrhfd   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-tkbx5   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-tkcwt   0/1     Pending   0          53s
+udacity       bloaty-mcbloatface-58c98b98d8-w4s8w   0/1     Pending   0          53s
+udacity       blue-8475cbdf46-nvtht                 1/1     Running   0          29m
+udacity       blue-8475cbdf46-pqsk6                 1/1     Running   0          29m
+udacity       blue-8475cbdf46-rsjvv                 1/1     Running   0          29m
+udacity       canary-v1-64598c676f-7kjmb            1/1     Running   0          29m
+udacity       canary-v1-64598c676f-hvfvn            1/1     Running   0          29m
+udacity       canary-v2-5dc9c56687-knspj            1/1     Running   0          29m
+udacity       canary-v2-5dc9c56687-z6hzc            1/1     Running   0          29m
+udacity       green-5cdd96c9b4-9vj9l                1/1     Running   0          29m
+udacity       green-5cdd96c9b4-dx4jr                1/1     Running   0          29m
+udacity       green-5cdd96c9b4-jhjsp                1/1     Running   0          29m
+udacity       hello-world-76d74574bb-lg48j          1/1     Running   0          29m
+os ~/Downloads/Deployment Roulette/apps/bloatware $ kubectl get pods --all-namespaces
+NAMESPACE     NAME                                  READY   STATUS    RESTARTS   AGE
+kube-system   aws-node-bnrxv                        1/1     Running   0          5m8s
+kube-system   aws-node-n9tbz                        1/1     Running   0          5m7s
+kube-system   aws-node-nq5kh                        1/1     Running   0          38m
+kube-system   aws-node-sxhz2                        1/1     Running   0          5m9s
+kube-system   cluster-autoscaler-d8cc67649-9mbdf    1/1     Running   0          11m
+kube-system   coredns-f47955f89-8wstd               1/1     Running   0          34m
+kube-system   coredns-f47955f89-ql2cs               1/1     Running   0          34m
+kube-system   kube-proxy-7x7n8                      1/1     Running   0          5m8s
+kube-system   kube-proxy-ch59d                      1/1     Running   0          5m9s
+kube-system   kube-proxy-rm5zv                      1/1     Running   0          38m
+kube-system   kube-proxy-rptnp                      1/1     Running   0          5m7s
+udacity       bloaty-mcbloatface-58c98b98d8-2lcbx   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-6f9nj   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-6wz72   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-76zts   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-7rnmz   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-8hmqq   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-9z7c9   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-bqnjf   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-cv2qm   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-jk87w   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-kcxw6   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-ljdrl   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-p4nzw   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-qrhfd   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-tkbx5   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-tkcwt   1/1     Running   0          6m3s
+udacity       bloaty-mcbloatface-58c98b98d8-w4s8w   1/1     Running   0          6m3s
+udacity       blue-8475cbdf46-nvtht                 1/1     Running   0          34m
+udacity       blue-8475cbdf46-pqsk6                 1/1     Running   0          34m
+udacity       blue-8475cbdf46-rsjvv                 1/1     Running   0          34m
+udacity       canary-v1-64598c676f-7kjmb            1/1     Running   0          34m
+udacity       canary-v1-64598c676f-hvfvn            1/1     Running   0          34m
+udacity       canary-v2-5dc9c56687-knspj            1/1     Running   0          34m
+udacity       canary-v2-5dc9c56687-z6hzc            1/1     Running   0          34m
+udacity       green-5cdd96c9b4-9vj9l                1/1     Running   0          34m
+udacity       green-5cdd96c9b4-dx4jr                1/1     Running   0          34m
+udacity       green-5cdd96c9b4-jhjsp                1/1     Running   0          34m
+udacity       hello-world-76d74574bb-lg48j          1/1     Running   0          34m

@@ -1,0 +1,13 @@
+os ~/Downloads/Deployment Roulette/apps $ kubectl top pods
+NAME                           CPU(cores)   MEMORY(bytes)   
+blue-8475cbdf46-4q5mg          1m           3Mi             
+blue-8475cbdf46-bct44          1m           3Mi             
+blue-8475cbdf46-xzh7z          1m           3Mi             
+canary-v1-64598c676f-sq5ts     0m           3Mi             
+canary-v1-64598c676f-wz2gv     0m           3Mi             
+canary-v2-5dc9c56687-pghxm     0m           3Mi             
+canary-v2-5dc9c56687-wlhjj     0m           3Mi             
+green-5cdd96c9b4-j7jmn         1m           3Mi             
+green-5cdd96c9b4-rmj8b         1m           3Mi             
+green-5cdd96c9b4-z2h8b         1m           3Mi             
+hello-world-76d74574bb-g7rct   1m           19Mi

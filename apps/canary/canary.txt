@@ -1,0 +1,66 @@
+os ~/Downloads/Deployment Roulette $ kubectl get service canary-svc
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+canary-svc   ClusterIP   172.20.93.204   <none>        80/TCP    7m
+
+os ~/Downloads/Deployment Roulette/apps/canary $ kubectl run debug --rm -i --tty --image nicolaka/netshoot -- /bin/bash
+I0630 14:47:40.717457    4522 trace.go:205] Trace[1549185177]: "Reflector ListAndWatch" name:k8s.io/client-go/tools/watch/informerwatcher.go:146 (30-Jun-2022 14:47:30.503) (total time: 10211ms):
+Trace[1549185177]: ---"Objects listed" error:<nil> 10209ms (14:47:40.713)
+Trace[1549185177]: [10.21111875s] [10.21111875s] END
+If you don't see a command prompt, try pressing enter.
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# curl 172.20.93.204
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.1# 
