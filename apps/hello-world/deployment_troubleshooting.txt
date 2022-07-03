@@ -25,12 +25,11 @@ Failed health check you want to ping /healthz
 Failed health check you want to ping /healthz
 10.100.1.244 - - [30/Jun/2022 18:10:19] "GET /nginx_status HTTP/1.1" 500 -
 
-os ~/Downloads/Deployment Roulette $ kubectl apply -f apps/hello-world
-deployment.apps/hello-world configured
-service/hello-world unchanged
-deployment.apps/blue unchanged
+os ~/Downloads/Deployment Roulette/apps/hello-world [main *=]$ kubectl apply -f hello.yml 
+deployment.apps/hello-world created
+service/hello-world created
 
-os ~/Downloads/Deployment Roulette $ kubectl -n udacity logs -f deployment/hello-world
+os ~/Downloads/Deployment Roulette/apps/hello-world [main *=]$ kubectl logs hello-world-794458d64d-hbzrd
 Ready to receive requests on 9000
  * Serving Flask app 'main' (lazy loading)
  * Environment: production
@@ -39,4 +38,17 @@ Ready to receive requests on 9000
  * Debug mode: off
  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://10.100.1.75:9000/ (Press CTRL+C to quit)
+ * Running on http://10.100.1.208:9000/ (Press CTRL+C to quit)
+Healthy!
+10.100.1.143 - - [03/Jul/2022 03:33:30] "GET /healthz HTTP/1.1" 200 -
+Healthy!
+10.100.1.143 - - [03/Jul/2022 03:33:32] "GET /healthz HTTP/1.1" 200 -
+Healthy!
+10.100.1.143 - - [03/Jul/2022 03:33:34] "GET /healthz HTTP/1.1" 200 -
+Healthy!
+10.100.1.143 - - [03/Jul/2022 03:33:36] "GET /healthz HTTP/1.1" 200 -
+Healthy!
+10.100.1.143 - - [03/Jul/2022 03:33:38] "GET /healthz HTTP/1.1" 200 -
+Healthy!
+10.100.1.143 - - [03/Jul/2022 03:33:40] "GET /healthz HTTP/1.1" 200 -
+os ~/Downloads/Deployment Roulette/apps/hello-world [main *=]$ 

@@ -39,6 +39,7 @@ The AWS environment will be built in the `us-east-2` region of AWS
     1. The `apps/hello-world` deployment is facing deployment issues.
         - Assessed, identified and resolved the problem with the deployment
         - Documented the findings via [deployment_troubleshooting.txt](apps/hello-world/deployment_troubleshooting.txt)
+        ![](apps/hello-world/deployment_troubleshooting.png)
 
 2. Canary deployments
     1. Created a shell script [canary.sh](apps/canary/canary.sh) that will be executed by GitHub actions.
